@@ -2,7 +2,6 @@ package CSEProject2_360;
 
 public class Calculator {
 	private int total;
-	
 	public Calculator () {
 		total = 0;  // not needed - included for clarity
 	}
@@ -25,7 +24,12 @@ public class Calculator {
 	}
 	
 	public void divide (int value) {//divides the value of the parameter to the total 
-		total = total / value;
+		if(value == 0){
+			total = 0;
+		}
+		else{
+			total = total / value;
+		}
 	}
 	
 	public String getHistory () {
